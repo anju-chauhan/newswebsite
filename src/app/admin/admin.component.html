@@ -1,0 +1,72 @@
+<nb-layout>
+  <nb-layout-header fixed>Admin pannel</nb-layout-header>
+
+  <nb-layout-column class="colored-column-basic">
+ <h3> Total News: {{news.length}}</h3>
+
+
+<nb-card *ngFor="let newsPost of news">
+  <nb-card-header><h3> {{newsPost.isBreakingNews ? 'Breaking News: ' : '' }}  {{newsPost.title}} </h3></nb-card-header>
+  <nb-card-body>
+    {{newsPost.description}}
+   <hr>
+    <b>{{newsPost.date}}</b>
+  </nb-card-body>
+  <!-- <nb-card-footer>By Wikipedia</nb-card-footer> -->
+</nb-card>
+<!-- <button nbButton> Create New News</button> -->
+
+<!-- <nb-card>
+      <nb-card-body class="example-items-col">
+        <nb-form-field>
+          <nb-icon nbPrefix icon="star" pack="eva"></nb-icon>
+          <input nbInput type="text">
+          <nb-icon nbSuffix icon="star" pack="eva"></nb-icon>
+        </nb-form-field>
+
+        <nb-form-field>
+          <nb-icon nbPrefix icon="star" pack="eva"></nb-icon>
+          <textarea nbInput placeholder="Initial width"></textarea>
+          <nb-icon nbSuffix icon="star" pack="eva"></nb-icon>
+        </nb-form-field>
+
+
+        <nb-form-field>
+          <nb-icon nbPrefix icon="star" pack="eva"></nb-icon>
+          <nb-select>
+            <nb-option>1</nb-option>
+          </nb-select>
+        </nb-form-field>
+      </nb-card-body>
+    </nb-card> -->
+
+	<!-- <nb-card>
+      <nb-card-body class="example-items-col">
+        <input type="text" nbInput fullWidth placeholder="Full width"><br>
+        <textarea nbInput placeholder="Initial width"></textarea>
+      </nb-card-body>
+    </nb-card> -->
+
+
+
+    <nb-card>
+      <nb-card-body class="example-items-col">
+
+        <input type="text" nbInput fullWidth fieldSize="small" placeholder="Input" [(ngModel)]="title">
+        <textarea nbInput fullWidth placeholder="Textarea" [(ngModel)]="description"></textarea>
+		<input nbInput placeholder="Pick Date" [nbDatepicker]="dateTimePicker">
+        <nb-datepicker #dateTimePicker></nb-datepicker>
+	    <nb-checkbox (checkedChange)="toggle($event)"> Breaking News</nb-checkbox>
+	     <button nbButton status="success" size="tiny" (click)="submit()"> submit </button>
+        <!-- <input type="text" nbInput fullWidth fieldSize="small" placeholder="Input" [formControl]="inputItemFormControl"> -->
+        <!-- <textarea nbInput fullWidth placeholder="Textarea" [formControl]="textareaItemFormControl">
+        </textarea> -->
+      </nb-card-body>
+    </nb-card>
+
+
+
+
+
+</nb-layout-column>
+</nb-layout>
