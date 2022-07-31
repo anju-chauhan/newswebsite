@@ -1,0 +1,182 @@
+<nb-layout [ngClass]="toggleChecked ? 'darkTheme' : ''">
+
+
+
+
+  <nb-layout-header fixed>    
+    <button nbButton status="success" size="tiny" (click)="toggle()"><nb-icon icon="menu-outline"></nb-icon></button>
+
+    <!-- <button nbButton status="info" size="tiny" (click)="toggleCompact()">Toggle Compact</button> -->
+
+<!--       <nb-tabset class="nb-tabset" fullWidth>
+        <nb-tab tabTitle="Users" tabIcon="person-outline" responsive>
+        </nb-tab>
+        <nb-tab tabTitle="Orders" tabIcon="bell-outline" responsive>
+        </nb-tab>
+        <nb-tab tabTitle="Transactions" tabIcon="email-outline" responsive>
+        </nb-tab>
+      </nb-tabset> -->
+
+    <nb-actions style="position: absolute; right: 0" class="nb-tabset">
+      <nb-action icon="search-outline"></nb-action>
+      <nb-action icon="power-outline"></nb-action>
+      <nb-action icon="person-outline"></nb-action>
+      <nb-action icon="home-outline"></nb-action>
+      <nb-action>Some Action</nb-action>
+    </nb-actions>
+
+
+
+  </nb-layout-header>
+
+  <nb-sidebar tag="left">
+    <nb-card size="medium">
+      <nb-list>
+        <nb-list-item *ngFor="let fruit of fruits">
+          {{ fruit }}
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+
+  </nb-sidebar>
+
+  <!-- <nb-sidebar right tag="right"></nb-sidebar> -->
+
+  <nb-layout-column class="colored-column-success" [ngClass]="toggleChecked ? 'darkTheme' : ''">
+
+  <nb-toggle status="basic"  [(checked)]="toggleChecked">Dark Theme</nb-toggle>
+
+<nb-card *ngFor="let newsPost of news">
+  <nb-card-header><h3> {{newsPost.isBreakingNews ? 'Breaking News: ' : '' }}  {{newsPost.title}} </h3></nb-card-header>
+  <nb-card-body>
+    {{newsPost.description}}
+   <hr>
+    <b>{{newsPost.date}}</b>
+  </nb-card-body>
+  <!-- <nb-card-footer>By Wikipedia</nb-card-footer> -->
+</nb-card>
+
+
+  </nb-layout-column>
+</nb-layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  <nb-layout>
+      <nb-layout-header fixed>Company Name</nb-layout-header>
+
+      <nb-sidebar>Sidebar Content</nb-sidebar>
+      
+      <nb-layout-column>
+
+      	<nb-card>
+      <nb-card-body class="example-items-col">
+        <nb-form-field>
+          <nb-icon nbPrefix icon="star" pack="eva"></nb-icon>
+          <input nbInput type="text">
+          <nb-icon nbSuffix icon="star" pack="eva"></nb-icon>
+        </nb-form-field>
+        <nb-form-field>
+          <nb-icon nbPrefix icon="star" pack="eva"></nb-icon>
+          <nb-select>
+            <nb-option>1</nb-option>
+          </nb-select>
+        </nb-form-field>
+      </nb-card-body>
+    </nb-card>
+    
+        Page Content <button nbButton>Hello World</button>
+      </nb-layout-column>
+
+
+
+     
+    </nb-layout>
+
+
+    <nb-card>
+  <nb-card-body>
+    A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+    Originally, nebula was a name for any diffuse astronomical object,
+    including galaxies beyond the Milky Way.
+  </nb-card-body>
+</nb-card>
+
+ <nb-card [size]="'medium'">
+      <nb-card-header>List inside nb-card-body</nb-card-header>
+      <nb-card-body>
+        <nb-list>
+          <nb-list-item *ngFor="let fruit of fruits">
+            {{ fruit }}
+          </nb-list-item>
+        </nb-list>
+      </nb-card-body>
+    </nb-card>
+    <nb-card [size]="'medium'">
+      <nb-card-header>List inside nb-card</nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let fruit of fruits">
+          {{ fruit }}
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+
+
+
+
+
+
+
+<nb-card>
+  <nb-card-body>
+    <nb-checkbox (checkedChange)="toggle($event)">Toggle me</nb-checkbox>
+  </nb-card-body>
+  <nb-card-body>
+    <label>Checked:</label> {{ checked }}
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+      <nb-card-body>
+        <nb-toggle></nb-toggle>
+      </nb-card-body>
+    </nb-card>
+
+
+    <nb-card>
+      <nb-card-body class="example-items-rows">
+        <nb-toggle status="basic">Basic</nb-toggle>
+        <nb-toggle status="primary">Primary</nb-toggle>
+        <nb-toggle status="success">Success</nb-toggle>
+        <nb-toggle status="info">Info</nb-toggle>
+        <nb-toggle status="warning">Warning</nb-toggle>
+        <nb-toggle status="danger">Danger</nb-toggle>
+        <div class="control-status-example">
+          <nb-toggle status="control">Control</nb-toggle>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+
+
+
+
+
+
+
+
+
+
+ -->

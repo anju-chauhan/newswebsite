@@ -1,0 +1,22 @@
+/*:host nb-layout-header  {
+      margin-left: auto;
+    }*/
+
+.nb-sidebar nb-card {
+  min-width: 10rem;
+  max-width: 20rem;
+  /*height: 500px;*/
+  margin: 0 auto 2rem;
+}
+
+
+:host nb-tab {
+      padding: 1.25rem;
+    }
+
+.nb-tabset {
+      float: right;
+    }
+.darkTheme{
+  background: black;
+}
