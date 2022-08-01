@@ -52,12 +52,12 @@
     <nb-card>
       <nb-card-body class="example-items-col">
 
-        <input type="text" nbInput fullWidth fieldSize="small" placeholder="Input" [(ngModel)]="title">
-        <textarea nbInput fullWidth placeholder="Textarea" [(ngModel)]="description"></textarea>
-		<input nbInput placeholder="Pick Date" [nbDatepicker]="dateTimePicker">
-        <nb-datepicker #dateTimePicker></nb-datepicker>
-	    <nb-checkbox (checkedChange)="toggle($event)"> Breaking News</nb-checkbox>
-	     <button nbButton status="success" size="tiny" (click)="submit()"> submit </button>
+        <input type="text" nbInput fullWidth fieldSize="small" placeholder="Input" [(ngModel)]="title"><br><br>
+        <textarea nbInput fullWidth placeholder="Textarea" [(ngModel)]="description"></textarea><br><br>
+		<input nbInput placeholder="Pick Date" [nbDatepicker]="dateTimePicker"><br>
+        <nb-datepicker #dateTimePicker></nb-datepicker><br>
+	    <nb-checkbox (checkedChange)="toggle($event)"> Breaking News</nb-checkbox><br><br>
+	     <button nbButton status="success" size="tiny" (click)="submit()"> submit </button><br>
         <!-- <input type="text" nbInput fullWidth fieldSize="small" placeholder="Input" [formControl]="inputItemFormControl"> -->
         <!-- <textarea nbInput fullWidth placeholder="Textarea" [formControl]="textareaItemFormControl">
         </textarea> -->
